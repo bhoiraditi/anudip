@@ -1,0 +1,93 @@
+Find the largest element using user input
+
+package ArrayProgram;
+import java.util.Scanner;
+public class LargestElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//creating the scanner object
+		Scanner sc=new Scanner(System.in);
+		
+		
+		int num1,num2,num3;
+
+		System.out.println("enter the first number: ");
+		num1=sc.nextInt();
+
+		System.out.println("enter the second number: ");
+		num2=sc.nextInt();
+
+		System.out.println("enter the third number: ");
+		num3=sc.nextInt();
+
+		if(num1>=num2 && num1>=num3) {
+			System.out.println("num1 is larger");
+		}
+		else if(num2>=num1 && num2>=num3) {
+			System.out.println("num2 is larger");
+		}
+		else {
+			System.out.println("num3 is larger");
+		}
+		
+		sc.close();
+
+	}
+
+}
+
+
+output:-
+enter the first number: 
+9
+enter the second number: 
+5
+enter the third number: 
+7
+num1 is larger
+
+
+
+checking the error
+
+class Animal{
+	private String name;
+	
+	public Animal(String name) {
+		this.name=name;
+	}
+	public void sound() {
+		System.out.println("Animal makes a sound");
+	}
+}
+class Dog extends Animal{
+	public Dog(String name) {
+		
+	}
+	public void sound(int volume) {
+		System.out.println("Dog barks with volume:"+volume);
+	}
+}
+
+class Cat extends Animal{
+	private void sound() {
+		Sytem.out.println("Cat meows");
+		
+	}
+}
+public class Main{
+	public static void main(String[]args) {
+		Dog dog=new Dog("Buddy");
+		dog.sound();
+		
+		Cat cat=new Cat("Whiskers");
+		cat.sound();
+	}
+}
+
+error:-
+dog constructor does not call the parameter
+and in cat class the method sound has a type their should have the print stetment that is. System.out.println("Cat meows)
+The sound method in the Cat class is private and hence not accessible from outside the class, including the main method too.
